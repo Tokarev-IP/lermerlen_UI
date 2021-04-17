@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/my_action_bar"
+        android:paddingHorizontal="20dp"
+        android:background="@color/green"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_scrollFlags="scroll|snap"
+            >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="Поиск товаров"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:gravity="center|left"
+            tools:ignore="RtlHardcoded"
+            />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="20dp"
+                >
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_weight="5"
+                    android:background="@drawable/rounded_corner_white"
+                    android:drawableEnd="@drawable/ic_baseline_search_24_green"
+                    android:paddingHorizontal="20dp"
+                    android:hint="Поиск"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_baseline_qr_code_15"
+                    android:background="@drawable/rounded_corner_white"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="30dp"
+            >
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <FrameLayout
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:background="@drawable/rounded_corner"
+                        android:paddingVertical="10dp"
+                        android:paddingHorizontal="10dp"
+                        android:layout_marginLeft="10dp"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Каталог"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end|bottom"
+                            android:src="@drawable/ic_baseline_list_50_white"
+                            />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:background="@drawable/rounded_corner_gray"
+                        android:paddingVertical="10dp"
+                        android:paddingHorizontal="10dp"
+                        android:layout_marginLeft="10dp"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Сад"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                        />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end|bottom"
+                            android:src="@drawable/ic_baseline_local_florist_50"
+                            />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:background="@drawable/rounded_corner_gray"
+                        android:paddingVertical="10dp"
+                        android:paddingHorizontal="10dp"
+                        android:layout_marginLeft="10dp"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Освещение"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end|bottom"
+                            android:src="@drawable/ic_baseline_light_50"
+                            />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:background="@drawable/rounded_corner_gray"
+                        android:paddingVertical="10dp"
+                        android:paddingHorizontal="10dp"
+                        android:layout_marginLeft="10dp"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Инструменты"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end|bottom"
+                            android:src="@drawable/ic_baseline_carpenter_50"
+                            />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:background="@drawable/rounded_corner_gray"
+                        android:paddingVertical="10dp"
+                        android:paddingHorizontal="10dp"
+                        android:layout_marginLeft="10dp"
+                        >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_baseline_arrow_forward_ios_50"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Смотреть все"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:paddingBottom="10dp"
+                            />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Предложение ограничено"
+                android:paddingHorizontal="10dp"
+                android:layout_marginVertical="30dp"
+                android:textColor="@color/black"
+                />
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:layout_marginBottom="30dp"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <FrameLayout
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:paddingVertical="10dp"
+                        android:paddingHorizontal="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:focusableInTouchMode="true"
+                        >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|top"
+                            android:src="@drawable/ic_baseline_photo_70"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="120 р/шт
+                            Средство для мытья"
+                            android:textColor="@color/black"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:gravity="center"
+                            />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:paddingVertical="10dp"
+                        android:paddingHorizontal="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:focusableInTouchMode="true"
+                        >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|top"
+                            android:src="@drawable/ic_baseline_photo_70"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="582 р/шт
+                            Пила по дереву"
+                            android:textColor="@color/black"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:gravity="center"
+                            />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:paddingVertical="10dp"
+                        android:paddingHorizontal="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:focusableInTouchMode="true"
+                        >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|top"
+                            android:src="@drawable/ic_baseline_photo_70"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5823 р/шт
+                            Генератор"
+                            android:textColor="@color/black"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:gravity="center"
+                            />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:paddingVertical="10dp"
+                        android:paddingHorizontal="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:focusableInTouchMode="true"
+                        >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|top"
+                            android:src="@drawable/ic_baseline_photo_70"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2563 р/шт
+                            Обои красные"
+                            android:textColor="@color/black"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:gravity="center"
+                            />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:paddingVertical="10dp"
+                        android:paddingHorizontal="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:focusableInTouchMode="true"
+                        >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|top"
+                            android:src="@drawable/ic_baseline_photo_70"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="12000 р/шт
+                            Стол кухонный"
+                            android:textColor="@color/black"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:gravity="center"
+                            />
+
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Лучшая цена"
+                android:paddingHorizontal="10dp"
+                android:layout_marginVertical="30dp"
+                android:textColor="@color/black"
+                />
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:layout_marginBottom="50dp"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <FrameLayout
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:paddingVertical="10dp"
+                        android:paddingHorizontal="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:focusableInTouchMode="true"
+                        >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|top"
+                            android:src="@drawable/ic_baseline_photo_70"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="120 р/шт
+                            Средство для мытья"
+                            android:textColor="@color/black"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:gravity="center"
+                            />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:paddingVertical="10dp"
+                        android:paddingHorizontal="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:focusableInTouchMode="true"
+                        >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|top"
+                            android:src="@drawable/ic_baseline_photo_70"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="582 р/шт
+                            Пила по дереву"
+                            android:textColor="@color/black"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:gravity="center"
+                            />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:paddingVertical="10dp"
+                        android:paddingHorizontal="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:focusableInTouchMode="true"
+                        >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|top"
+                            android:src="@drawable/ic_baseline_photo_70"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5823 р/шт
+                            Генератор"
+                            android:textColor="@color/black"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:gravity="center"
+                            />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:paddingVertical="10dp"
+                        android:paddingHorizontal="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:focusableInTouchMode="true"
+                        >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|top"
+                            android:src="@drawable/ic_baseline_photo_70"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2563 р/шт
+                            Обои красные"
+                            android:textColor="@color/black"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:gravity="center"
+                            />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:paddingVertical="10dp"
+                        android:paddingHorizontal="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:focusableInTouchMode="true"
+                        >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|top"
+                            android:src="@drawable/ic_baseline_photo_70"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="12000 р/шт
+                            Стол кухонный"
+                            android:textColor="@color/black"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:gravity="center"
+                            />
+
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_navigation_view"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        app:menu="@menu/menu_bottom_navigation"
+        app:labelVisibilityMode="labeled"
+        />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

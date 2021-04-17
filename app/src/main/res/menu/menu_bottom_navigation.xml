@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_one"
+        android:icon="@drawable/ic_baseline_search_30"
+        android:title="Главная" />
+
+    <item
+        android:id="@+id/action_two"
+        android:icon="@drawable/ic_baseline_format_list_bulleted_30"
+        android:title="Мой список" />
+
+    <item
+        android:id="@+id/action_three"
+        android:icon="@drawable/ic_baseline_store_mall_directory_30"
+        android:title="Магазины" />
+
+    <item
+        android:id="@+id/action_four"
+        android:icon="@drawable/ic_baseline_account_circle_30"
+        android:title="Профиль" />
+
+    <item
+        android:id="@+id/action_five"
+        android:icon="@drawable/ic_baseline_shopping_cart_30"
+        android:title="Корзина" />
+
+</menu>
